@@ -1,5 +1,5 @@
 {% extends "admin/base_site.html" %}
-{% load i18n admin_modify admin_static %}
+{% load i18n admin_modify admin_static admintools_bootstrap %}
 {% load url from future %}
 
 {% block extrahead %}{{ block.super }}
@@ -20,7 +20,7 @@
 		../../|{{ app_label|capfirst|escape }}
 		*{% if has_change_permission %}../|{{ opts.verbose_name_plural|capfirst }}{% else %}
 		{{ opts.verbose_name_plural|capfirst }}{% endif %}
-		*{% if add %}{% trans "Add" %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+		*{% if add %}{% trans "Add" %} {{ opts.verbose_name }}{% else %}{{ original|replace_pipes|truncatewords:"18" }}{% endif %}
 	{% endif %}
 {% endblock %}
 

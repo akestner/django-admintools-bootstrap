@@ -19,5 +19,6 @@ gateway/static/*
 .idea/*
 __MACOSX/*
 .DS_Store
+.ropeproject
 
 .sass-cache/*

@@ -99,6 +99,11 @@ def bootstrap_pagination(cl):
     }
 bootstrap_pagination = register.inclusion_tag('admin/pagination.html')(bootstrap_pagination)
 
+# replace | with || for workaround in breadcrumbs tag
+@register.filter
+def replace_pipes(value):
+    return unicode(value).replace('|', '||')
+
 # breadcrumbs tag
 
 class BreadcrumbsNode(template.Node):
@@ -127,7 +132,9 @@ class BreadcrumbsNode(template.Node):
         try:
             data.index('<div class="breadcrumbs">')
         except ValueError:
-            lines = [ l.strip().split(self.delimiter) for l in data.split("\n") if l.strip() ]
+            # data probably shouldn't have any \0 in it...
+            data = data.replace(self.delimiter*2, '\0')
+            lines = [ [d.replace('\0', self.delimiter) for d in l.strip().split(self.delimiter)] for l in data.split("\n") if l.strip() ]
         else:
             # data is django-style breadcrumbs, parsing
             try:

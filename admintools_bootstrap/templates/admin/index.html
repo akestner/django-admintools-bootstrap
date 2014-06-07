@@ -1,5 +1,5 @@
 {% extends "admin/base_site.html" %}
-{% load i18n admin_tools_dashboard_tags media %}
+{% load i18n admin_tools_dashboard_tags compressed %}
 
 {% block bodyclass %}dashboard{% endblock %}
 
@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block extrahead %}
-	{% include_media 'admin.js' %}
+	{% compressed_js 'admin_bs3' %}
 {% endblock %}
 
 {% block breadcrumbs %}{% endblock %}

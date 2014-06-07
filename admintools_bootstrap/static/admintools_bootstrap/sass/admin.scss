@@ -1,7 +1,7 @@
 @import "compass";
 @import "constants";
-@import "admintools_bootstrap/lib/sass-bootstrap/sass-bootstrap";
-@import "admintools_bootstrap/sass/mixins";
+@import "../lib/sass-bootstrap/sass-bootstrap";
+@import "mixins";
 
 $redbor: 1px solid red;
 $menu_search_width: 190px;

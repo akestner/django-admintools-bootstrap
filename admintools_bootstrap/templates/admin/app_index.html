@@ -1,12 +1,12 @@
 {% extends "admin/index.html" %} 
-{% load i18n admin_tools_dashboard_tags %} 
+{% load i18n admin_tools_dashboard_tags admintools_bootstrap %}
 
 {% if not is_popup %}
 
 {% block breadcrumbs %}
   ../|{% trans "Home" %}
   {% for app in app_list %}
-    {% blocktrans with app.name as name %}{{ name }}{% endblocktrans %}
+    {% blocktrans with app.name as name %}{{ name|replace_pipes }}{% endblocktrans %}
   {% endfor %}
 {% endblock %}
 

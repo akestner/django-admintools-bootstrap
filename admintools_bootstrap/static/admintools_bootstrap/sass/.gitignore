@@ -1,0 +1,3 @@
+# All css files are temporary here
+*.css
+.sass-cache

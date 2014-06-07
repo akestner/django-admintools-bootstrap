@@ -14,7 +14,7 @@
 </ul>
 
 {% if pagination_required %}
-<ul>
+<ul class="pagination">
 
 {% if curr_page.has_previous %}
   <li class="prev"><a href="{% bootstrap_page_url cl curr_page.previous_page_number %}">&larr; {% trans "Previous" %}</a></li>

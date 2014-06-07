@@ -2,7 +2,7 @@
 {% spaceless %}
 	{% if not item.is_empty %}
 
-		<li class="{% if not item.enabled %} disabled{% endif %}{% if selected %} active{% endif %}{% if item.css_classes %} {{ item.css_classes|join:' ' }}{% endif %}{% if item.children %} dropdown{% endif %}">
+		<li class="{% if not item.enabled %} disabled{% endif %}{% if selected %} active{% endif %}{% if item.css_classes %} {{ item.css_classes|join:' ' }}{% endif %}{% if item.children %} dropdown-submenu{% endif %}">
 			<a role="button" href="{% if item.url and item.enabled %}{{ item.url }}{% else %}#{% endif %}"{% if item.description %}
 			   title="{{ item.description }}"{% endif %}{% if item.accesskey %}
 			   accesskey="{{ item.accesskey }}"{% endif %}
@@ -12,7 +12,7 @@
 				{% if item.children and item.enabled and index != 'submenu' %}<b class="caret"></b>{% endif %}
 			</a>
 			{% if item.children and item.enabled %}
-				<ul class="{% if index == 'submenu' %}submenu open{% else %}dropdown-menu{% endif %}">
+				<ul class="{% if index == 'submenu' %}dropdown-menu{% else %}dropdown-menu multi-level{% endif %}">
 					{% for child_item in item.children %}
 						{% admin_tools_render_menu_item child_item 'submenu' %}
 					{% endfor %}

@@ -81,7 +81,7 @@
 {% breadcrumbs %}
 	{% block breadcrumbs %}
 		/|{% trans "Home" %}
-		{% if title %}{{ title }}{% endif %}
+		{% if title %}{{ title|replace_pipes }}{% endif %}
 	{% endblock %}
 {% endbreadcrumbs %}
 
