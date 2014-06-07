@@ -12,9 +12,9 @@
                         {% if field.is_readonly %}
                             <div class="readonly-input form-group">
                               {# good place for various hacks #}
-                              {% block "readonly_field_contents" %}
+                              {% block readonly_field_contents %}
                                 {% include "admin/includes/_readonly_field_contents.html" %}
-                              {% readonly_field_contents %}
+                              {% endblock readonly_field_contents %}
                             </div>
                         {% else %}
                             <div class="form-group">

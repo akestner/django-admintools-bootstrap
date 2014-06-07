@@ -29,7 +29,7 @@
 <header class="navbar navbar-pills nav-justified navbar-fixed-top bs-docs-nav">
 	{% block branding %}{% endblock %}
 	{% block nav-global %}{% endblock %}
-	{% block search %}{% endblock %}
+  {% block search %}{% include 'admin/default_search.html' %}{% endblock %}
 	{% if user.is_active and user.is_staff %}
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav navbar-right">
