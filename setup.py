@@ -9,14 +9,13 @@ install_requires = [
     'BeautifulSoup>=3.2.0',
     'django-appconf>=0.4.1',
     'versiontools>=1.8.2',
-    'django-mediagenerator==1.11',
 ]
 
 setup(
     name='django-admintools-bootstrap',
     version=':versiontools:admintools_bootstrap:',
     url='https://github.com/spenoir/django-admintools-bootstrap',
-    description='Bootstrap theme mediagenerator bundle for django admin',
+    description='Bootstrap theme for django admin',
     long_description=__doc__,
     setup_requires = [
         'versiontools >= 1.8.2',
