@@ -3,7 +3,7 @@ __version__ = (1, 0, 0, "final", 0)
 
 ADMIN_PIPELINE_CSS = {
 
-    'admin': {
+    'admin_bs3': {
         'source_filenames': (
             'admintools_bootstrap/chosen/chosen.css',
             'admintools_bootstrap/lib/bootstrap-datetimepicker.css',
@@ -16,7 +16,7 @@ ADMIN_PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
-    'admin_dashboard': {
+    'admin_bs3_dashboard': {
         'source_filenames': (
             'admin_dashboard.css',
             'admintools_bootstrap/sass/dashboard.scss',
@@ -29,7 +29,7 @@ ADMIN_PIPELINE_CSS = {
 }
 
 ADMIN_PIPELINE_JS = {
-    'admin': {
+    'admin_bs3': {
         'source_filenames': (
             'admintools_bootstrap/js/lazyload.js',
             'admintools_bootstrap/js/jquery-1.9.1.js',
