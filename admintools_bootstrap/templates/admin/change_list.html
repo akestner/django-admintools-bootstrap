@@ -84,7 +84,7 @@
 			{% endif %}
 		{% endblock %}
 
-		<div class="{% if cl.has_filters %}col-lg-9{% else %}col-lg-12{% endif %}">
+		<div class="{% if cl.has_filters %}col-lg-9 col-md-9 col-sm-9{% else %}col-lg-12 col-md-12 col-sm-12{% endif %}">
 			<div id="changelist">
 				{% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
 
