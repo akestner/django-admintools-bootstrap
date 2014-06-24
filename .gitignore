@@ -22,3 +22,7 @@ __MACOSX/*
 .ropeproject
 
 .sass-cache/*
+
+/.idea/
+*.iml
+/atlassian-ide-plugin.xml
